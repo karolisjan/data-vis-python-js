@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="style.css" type="text/css"/>
+
+<body>
+  <div id="chart-holder" class="dev">
+    <div id="header">
+      <h2>Header 2</h2>
+      <p>Description</p>
+    </div>
+
+    <div id="chart-components">
+      <div id="main">
+        <svg id="chart" width="300" height="225">
+          <text id="title" text-anchor="middle" x="150" y="20">
+            A dummy chart
+          </text>
+          <circle r="15" cx="100" cy="50"></circle>
+          <line x1="20" y1="20" x2="20" y2="130"></line>
+          <line x1="20" y1="130" x2="280" y2="130"></line>
+          <rect x="240" y="5" width="55" height="30"></rect>
+          <polygon points="210,100 230,100 220,80"></polygon>
+          <text 
+            x="20" 
+            y="20"
+            transform="rotate(-90,20,20)"
+            text-anchor="end"
+            dy="0.71em">y axis label
+          </text>
+          <!-- 
+            Paths are the most complicated and powerful SVG element.
+
+            M20 130: move to coordinate 20, 130
+            L60 70: draw a line to 60, 70
+            L110 100: draw a line to 110 100
+            L160 45: draw a line to 160 45
+          -->
+          <path d="M20 130L60 70L110 100L160 45"></path>
+        </svg>
+      </div>
+      <div id="sidebar">
+        <p>
+          Chart description.
+        </p>
+      </div> 
+    </div>
+  </div>
+
+  <script src="http://d3js.org/d3.v5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
